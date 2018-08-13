@@ -1,2 +1,4 @@
 # GYOF
-OPENAG-India .Based on OpenAG initiative by MIT. Hardware has been ready, this is software for the same
+OPENAG-India.
+Based on OpenAG initiative by MIT.
+Hardware is ready, this is software for the same
