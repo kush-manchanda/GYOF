@@ -1,18 +1,21 @@
+#!/usr/bin/python
+# Author: Saizenki
+# Date: 14.08.2018
 import RPi.GPIO as GPIO
 from AllPin import Pin 
 
 def __init__(self):
 	pin_ob=Pin()
-	num=pin_ob.number(ExFan)
+	num=pin_ob.number("ExFan")
 	GPIO.setwarnings(False)
 	GPIO.setmode(GPIO.BOARD)
 	GPIO.setup(Relay1, GPIO.OUT)
 
 
-def FanOn(self,pin):
+def FanOn():
 	GPIO.output(pin, GPIO.HIGH)
-	print("Fan On")
+	print("Exhaust Fan On")
 	
-def FanOff(self,pin):
+def FanOff():
 	GPIO.output(pin, GPIO.LOW)
-	print("Fan Off")
+	print("Exhaust Fan Off")
