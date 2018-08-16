@@ -12,7 +12,7 @@ def __init__():
 	print(pin)
 	GPIO.setwarnings(False)
 	GPIO.setmode(GPIO.BOARD)
-	GPIO.setup(Relay1, GPIO.OUT)
+	GPIO.setup(pin, GPIO.OUT)
 
 def LedOn():
 	GPIO.output(pin, GPIO.HIGH)
