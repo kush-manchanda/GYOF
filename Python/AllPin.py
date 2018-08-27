@@ -4,8 +4,10 @@ pina=29 # Fan Inside / Circulation
 pinb=31 # Fan Outside/ Exhaust
 pinc=33 # LEDs
 pind=35 # AirPump
-#pine=
-#pinf=
+pine=17  #DHT22
+pinSDA=3 #I2C
+pinSCL=5 #I2C
+#pinf=   #DS18B20
 
 class Pin(object):
 	@staticmethod
@@ -13,10 +15,12 @@ class Pin(object):
 		if name=="ExFan":
 			return pinb
 		if name=="CirFan":
-			return pina;
+			return pina
 		if name=="Led":
 			return pinc
 		if name=="AirPump":
-			return pind;
+			return pind
+		if name=="DHT22"
+			return pine
 		else:
 			return "Invalid Pin"

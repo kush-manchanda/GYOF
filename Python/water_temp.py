@@ -4,6 +4,7 @@
 
 import RPi.GPIO as GPIO
 from AllPin import Pin
+from DS18B20 import WaterTemp
 
 def __init__(self):
 	GPIO.setwarnings(False)
