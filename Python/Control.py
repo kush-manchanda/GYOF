@@ -14,3 +14,5 @@
 #Add EC sensor, pH sensor 
 #Make a safe raspberry power off file
 #!!!! Where to show the Temp,Humidity, Image data ? Develop frontend
+
+#GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_UP)
