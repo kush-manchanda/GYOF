@@ -3,8 +3,10 @@ from DHT22 import humidity, temperature
 import ExFan
 import CirFan
 
+#Adjusting one value should not disturb other value
+#Call this file from Control file
 def adjustTemperature(target_temp):
-	#To decrease(increase) temperature turn circulation and exhaust fan on(off)
+	#To decrease(increase) temperature turn exhaust fan on(off)
 	temp=temperature()
 	exhaust=ExFan()
 	if target_temp < temp:
