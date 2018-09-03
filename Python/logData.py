@@ -14,7 +14,3 @@ def logFile(timestamp, name, status, attribute, value, comment):
     f = open('/home/pi/GYOF/Data/data.txt', 'a') #Edit File Path as per the name of the folder  i.e Repository
     s= counter+": "+timestamp + ", " + name + ", " + status + ", " + attribute + ", " + value + "," + comment + "\n"
     counter+=1
-    print(s)
-    f.write(s)
-    f.close()
-
