@@ -9,7 +9,7 @@ def __init__(self):
 	num=pin_ob.number("AirPump")
 	GPIO.setwarnings(False)
 	GPIO.setmode(GPIO.BOARD)
-	GPIO.setup(Relay1, GPIO.OUT)
+	GPIO.setup(num, GPIO.OUT)
 
 
 def AirPumpOn():
