@@ -8,5 +8,5 @@ class ds18b20():
 		sensor = W1ThermSensor()
 		#So just make 1 oled file and import this and get the temperature , no need for this file
 		temperature = sensor.get_temperature()
-		t=("The temperature is %s celsius" % temperature)
-		return t
+		#t=("The temperature is %s celsius" % temperature)
+		return temperature
