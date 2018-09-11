@@ -56,4 +56,5 @@ def display(text1,text2,time):
 		draw.text((x,top), text1, font=font,fill=255)
 		draw.text((x,top+16), text2, font=font, fill=255)
 		disp.display()
+		time.sleep(1)
 

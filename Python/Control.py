@@ -20,7 +20,7 @@
 #Actuators
 import time
 import CirFan
-import AirPump
+import AirPump 
 import ExFan
 import Led
 
@@ -42,44 +42,50 @@ import time #For time.sleep()
 from logData import logData
 
  #24Hours Format
-
-def main():
+flag =1
+while True: 
 	location_india=pytz.timezone('Asia/Kolkata')
 	time_india=datetime.now(location_india)
 	timestamp='{:%H:%M}'.format(time_india)
-	if timestamp==("6:00"):
+	
+	if timestamp>=("6:00") && flag=0:
 		led_on=Led.LedOn()
+		air_on=AirPump.AirPumpOn()
+		flag=1 #LED ON
 		#logData()
 	if timestamp==("22:00"):
 		led_off=Led.LedOff()
-
-	if #ExFan
-	if #CirFan
-	
-	#Put if(s) and check time for LED , Fans x2, AirPump
+		air_off=AirPumpOff()
+		flag=0
+		
+	#Put if(s) and check time for LED and AirPump
 	#Add a while loop to hit the sensors and get value
 	#Call the Display function from Display_oled with time, to display this data. 5 sec each. 20 Seconds gap between every data update
-	while True: 
 	#1
 	co2ppm=mh_z14.co2()
 	display("CO2 ppm is",co2ppm,5)
+	print("CO2 ppm is",co2ppm)
 	#2
 	water_temp=ds18b20.WaterTemp()
-	display(water_temp,5)
+	display("Water Temperature is",water_temp,5)
+	print("Water Temperature is",water_temp)
 	#3
 	temp_out=DHT22.temp()
-	display(temp_out,5)
+	display("Temperature outside is:",temp_out,5)
+	print("Temperature outside is:",temp_out)
 
 	hum_out=DHT22.humidity()
-	display(hum_out,5)
+	display("Humidity outside is: ",hum_out,5)
+	print("Humidity outside is: ",hum_out)
 	#4
 	temp_in=si7021.getTempC()
-	display(temp_in,5)
-
+	display("Temperature inside is: ",temp_in,5)
+	print("Temperature inside is: ",temp_in)
+	
 	hum_in=si7021.getHumidity()
-	display(hum_in,5)
+	display("Humidity inside is: ",hum_in,5)
+	print("Humidity inside is: ",hum_in)
 
-	break
 
 
 
