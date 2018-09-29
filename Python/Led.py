@@ -4,22 +4,20 @@
 import RPi.GPIO as GPIO
 from AllPin import Pin
 
-name="Led"
 
-def __init__():
-	pin_ob=Pin()
-	pin=pin_ob.number(name)
-	print(pin)
-	GPIO.setwarnings(False)
-	GPIO.setmode(GPIO.BOARD)
-	GPIO.setup(pin, GPIO.OUT)
+name="Led"
+pin_ob=Pin()
+pin=pin_ob.number(name)
+GPIO.setwarnings(False)
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(pin, GPIO.OUT)
 
 def LedOn():
-	GPIO.output(pin, GPIO.HIGH)
+	GPIO.output(pin, GPIO.LOW)
 	print("Led is On")
 
 def LedOff():
-	GPIO.output(pin, GPIO.LOW)
+	GPIO.output(pin, GPIO.HIGH)
 	print("Led is Off")
+	GPIO.cleanup()
 
-LedOn()

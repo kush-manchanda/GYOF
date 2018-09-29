@@ -1,21 +1,22 @@
 #!/usr/bin/python
 # Author: Saizenki
-# Date: 14.08.2018
+# Date: 30.09.2018
 import RPi.GPIO as GPIO
-from AllPin import Pin 
+from AllPin import Pin
 
+name="WhiteLed"
 pin_ob=Pin()
-pin=pin_ob.number("ExFan")
+pin=pin_ob.number(name)
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(pin, GPIO.OUT)
 
-
-def FanOn():
+def LedOn():
 	GPIO.output(pin, GPIO.LOW)
-	print("Exhaust Fan On")
-	
-def FanOff():
+	print("Led is On")
+
+def LedOff():
 	GPIO.output(pin, GPIO.HIGH)
-	print("Exhaust Fan Off")
-	GPIO.cleanup()
+	print("Led is Off")
+
+
