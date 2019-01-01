@@ -1,9 +1,7 @@
 # GYOF- Grow your own food
-
-OPENAG-India.
 Based on OpenAG initiative by MIT.
-
-** ##Sensors **
+> **India's first personal food computer**
+## Sensors
 1. AM2315
 2. SI7021
 3. pH sensor
@@ -12,7 +10,7 @@ Based on OpenAG initiative by MIT.
 6. DHT22
 7. Optomax digital liquid sensor
 
-** ##Relays **
+## Relays 
 1. White LEDs (AC)
 2. LED Panel (24V DC)
 3. Circulation Fan (12V DC)
