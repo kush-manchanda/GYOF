@@ -1,4 +1,6 @@
 # GYOF- Grow your own food
+This repository is an inventory to https://github.com/Saizenki/Seed which is the actual working code.
+> For explanation on working and installation refer https://github.com/Saizenki/Seed
 Based on OpenAG initiative by MIT.
 > **India's first personal food computer**
 ## Sensors
