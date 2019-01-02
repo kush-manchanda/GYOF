@@ -1,0 +1,47 @@
+# Crontab jobs used by the Seed
+# Author: Saizenki
+# Date: 03/11/2018
+# Warning: This will overwrite any existing crontab, do not use if you use cron for other purposes
+
+# Don't send email
+MAILTO=""
+
+# Path to the Seed python code
+PY_PATH=/home/pi/Seed/Python
+
+# Path to the Seed scripts
+Seed_SCRIPTS=/home/pi/Seed/scripts
+
+# Path to other scripts
+SCRIPT_PATH=/home/pi/scripts
+
+# Cron output log
+CRON_LOG=/home/pi/Seed/logs/cron.log
+
+# m h  dom mon dow   command
+# Check thermostat every minute
+*/1 * * * * python $PY_PATH/adjustThermostat.py >> $CRON_LOG 2>&1
+
+#Turn Circultaion Fan ON
+20 * * * * python $PY_PATH/CircFanOn.py >> $CRON_LOG 2>&1
+
+#Turn Ciruclation Fan OFF
+10 * * * * python $PY_PATH/CircFanOff.py >> $CRON_LOG 2>&1
+
+# Turn lights on at 6AM
+0 6 * * * python $PY_PATH/LedOn.py >> $CRON_LOG 2>&1
+
+# Turn lights off at 22:30 (10:30PM)
+30 22 * * * python $PY_PATH/LedOff.py >> $CRON_LOG 2>&1
+
+# Log the sensors every 20 minutes
+*/20 * * * * python $PY_PATH/logSensors.py >> $CRON_LOG 2>&1
+
+# Take a USB camera picture one minute after the hour from 6am to 10pm
+1 6-22 * * * $Seed_SCRIPTS/webcamA.sh >> $CRON_LOG 2>&1
+
+# Take a USB camera picture two minutes after the hour from 6am to 10pm
+2 6-22 * * * $Seed_SCRIPTS/webcamB.sh >> $CRON_LOG 2>&1
+
+# Render the data for the website
+10 * * * * $Seed_SCRIPTS/render.sh >> $CRON_LOG 2>&1
