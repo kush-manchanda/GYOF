@@ -1,8 +1,15 @@
 # GYOF- Grow your own food
 This repository is an inventory to https://github.com/Saizenki/Seed which is the actual working code.
 > For explanation on working and installation refer https://github.com/Saizenki/Seed
+
 Based on OpenAG initiative by MIT.
 > **India's first personal food computer**
+# Hardware
+> Includes Sensors, Actuators (relay), frame, acrylic glass, tubs, nuuts&bolts, wood
+
+# Software
+> The working code with installation is in Seed (https://github.com/Saizenki/Seed)
+
 ## Sensors
 1. AM2315
 2. SI7021
@@ -18,3 +25,6 @@ Based on OpenAG initiative by MIT.
 3. Circulation Fan (12V DC)
 4. Exhaust Fan (12V DC)
 5. Air pump (AC)
+
+## Images 
+
