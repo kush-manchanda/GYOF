@@ -1,3 +1,13 @@
+Scripts to run:
+1. Arduino file: seed_pfc_v#.ino
+2. serial_con_#.py
+
+Hardware:
+1. Arduinoo Mega
+2. Raspberry Pi with raspbian 32GB Storage
+3. Sensors
+4. Actuators
+
 You'll need following libraries for your arduino:
 1. Adafruit DHT library = https://www.arduinolibraries.info/libraries/simple-dht
 2. Adafruit Common sensor library = https://github.com/adafruit/Adafruit_Sensor
