@@ -16,7 +16,7 @@ time.sleep(3)
 import sys
 import urllib3
 import certifi
-myAPI='QANE21YUNJGG3XEJ'
+myAPI='*********'
 baseURL=  'https://api.thingspeak.com/update?api_key=%s' % myAPI
 
 

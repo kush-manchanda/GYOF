@@ -5,7 +5,7 @@ from serial_con_7 import return_list
 import sys
 import urllib3
 import time
-myAPI='QANE21YUNJGG3XEJ'
+myAPI='**********'
 baseURL=  'https://api.thingspeak.com/update?api_key=%s' % myAPI
 
 data_listt=return_list()
