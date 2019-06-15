@@ -1,5 +1,5 @@
 # GYOF- Grow your own food
-This repository is an inventory to https://github.com/Saizenki/Seed which is the actual working code.
+This repository is an inventory to https://github.com/Saizenki/Seed.
 > For explanation on working and installation refer https://github.com/Saizenki/Seed
 
 Based on OpenAG initiative by MIT.
@@ -26,5 +26,12 @@ Based on OpenAG initiative by MIT.
 4. Exhaust Fan (12V DC)
 5. Air pump (AC)
 
-## Images 
+## Instagram
+
+## Running:
+There are only 2 files that need to be run in order for the PFC to start:
+1. Python script on raspberry pi
+2. Arduino file on Arduino, connected to RPi through serial usb.
+
+
 
